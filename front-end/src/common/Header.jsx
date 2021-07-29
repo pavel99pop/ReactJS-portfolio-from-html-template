@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home } from "../components";
+import { Home, About } from "../components";
 
 const Header = () => {
   return (
@@ -27,9 +27,9 @@ const Header = () => {
                   {/* <!-- Logo --> */}
                   <div class="col-xl-2 col-lg-2 col-md-1">
                     <div class="logo">
-                      <a href="index.html">
+                      <Link to="/">
                         <img src="assets/img/logo/logo.png" alt="" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div class="col-xl-10 col-lg-10 col-md-10">
@@ -39,19 +39,19 @@ const Header = () => {
                         <nav>
                           <ul id="navigation">
                             <li>
-                              <a href="index.html">Home</a>
+                              <Link to="/">Home</Link>
                             </li>
                             <li>
-                              <a href="about.html">About</a>
+                              <Link to="/about">About</Link>
                             </li>
                             <li>
-                              <a href="services.html">Services</a>
+                              <Link to="/services.html">Services</Link>
                             </li>
                             <li>
-                              <a href="portfolio.html">Portfolio</a>
+                              <Link to="/portfolio.html">Portfolio</Link>
                             </li>
                             <li>
-                              <a href="#">Page</a>
+                              <Link to="/#">Page</Link>
                               <ul class="submenu">
                                 <li>
                                   <a href="blog.html">Blog</a>
@@ -95,6 +95,7 @@ const Header = () => {
 
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </div>
     </Router>
