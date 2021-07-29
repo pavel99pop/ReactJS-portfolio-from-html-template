@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home, About, Services } from "../components";
+import { Home, About, Services, Portfolio } from "../components";
 
 const Header = () => {
   return (
@@ -48,7 +48,7 @@ const Header = () => {
                               <Link to="/services">Services</Link>
                             </li>
                             <li>
-                              <Link to="/portfolio.html">Portfolio</Link>
+                              <Link to="/portfolio">Portfolio</Link>
                             </li>
                             <li>
                               <Link to="/#">Page</Link>
@@ -97,6 +97,7 @@ const Header = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/services" component={Services} />
+          <Route exact path="/portfolio" component={Portfolio} />
         </Switch>
       </div>
     </Router>
