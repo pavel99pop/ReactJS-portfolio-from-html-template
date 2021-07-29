@@ -50,9 +50,9 @@ const Blog = () => {
                     </div>
 
                     <div class="blog_details">
-                      <a class="d-inline-block" href="blog_details.html">
+                      <Link class="d-inline-block" to="/blog-details">
                         <h2>Google inks pact for new 35-storey office</h2>
-                      </a>
+                      </Link>
                       <p>
                         That dominion stars lights dominion divide years for
                         fourth have don't stars is that he earth it first

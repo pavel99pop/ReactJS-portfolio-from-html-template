@@ -1,6 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home, About, Services, Portfolio, Contact, Blog } from "../components";
+import {
+  Home,
+  About,
+  Services,
+  Portfolio,
+  Contact,
+  Blog,
+  BlogDetails,
+} from "../components";
 
 const Header = () => {
   return (
@@ -57,7 +65,7 @@ const Header = () => {
                                   <Link to="/blog">Blog</Link>
                                 </li>
                                 <li>
-                                  <a href="blog_details.html">Blog Details</a>
+                                  <Link to="/blog-details">Blog Details</Link>
                                 </li>
                                 <li>
                                   <a href="elements.html">Element</a>
@@ -100,6 +108,7 @@ const Header = () => {
           <Route exact path="/portfolio" component={Portfolio} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/blog" component={Blog} />
+          <Route exact path="/blog-details" component={BlogDetails} />
         </Switch>
       </div>
     </Router>
